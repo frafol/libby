@@ -12,6 +12,7 @@
     <modules>
         <module>core</module>
         <module>bukkit</module>
+        <module>hytale</module>
         <module>bungee</module>
         <module>nukkit</module>
         <module>sponge</module>
