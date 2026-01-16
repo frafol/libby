@@ -1,10 +1,4 @@
-# Libby (AlessioDP)
-
-## [Changes in this fork](./CHANGELOG.md)
-
-## 2.0.0 Beta
-
-A beta version of the 2.0.0 update is available on the `gradle` branch, with many changes and improvements. [Try it out!](https://github.com/AlessioDP/libby/tree/gradle#usage)
+# Libby (forked from AlessioDP)
 
 # Libby
 
@@ -28,38 +22,7 @@ who self-host their plugins on servers with limited bandwidth.
 
 ### Usage
 
-Firstly, add the maven artifact to your `pom.xml`
-```xml
-<!-- Libby (AlessioDP) Repository -->
-<repository>
-  <id>AlessioDP</id>
-  <url>https://repo.alessiodp.com/releases/</url>
-</repository>
-
-<dependency>
-    <groupId>net.byteflux</groupId>
-    <artifactId>libby-bukkit</artifactId> <!-- Replace bukkit if you're using another platform -->
-    <version>1.3.1</version>
-</dependency>
-``` 
-
-Remember to **always** relocate Libby to avoid conflicts
-```xml
-<plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-shade-plugin</artifactId>
-    <configuration>
-        <relocations>
-            <relocation>
-                <pattern>net.byteflux.libby</pattern>
-                <shadedPattern>yourPackage.libs.net.byteflux.libby</shadedPattern>
-            </relocation>
-        </relocations>
-    </configuration>
-</plugin>
-```
-
-Then, create a new LibraryManager instance
+Create a new LibraryManager instance
 ```java
 // Create a library manager for a Bukkit/Spigot plugin
 BukkitLibraryManager bukkitLibraryManager = new BukkitLibraryManager(plugin);
